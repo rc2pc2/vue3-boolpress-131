@@ -20,7 +20,10 @@ import AppHeader from './components/AppHeader.vue';
 <template>
   <AppHeader />
 
-  <RouterView/>
+  <!-- Gestione del luogo in cui verranno inserite e cambiate le varie pagine -->
+   <!-- Il luogo in cui cambieranno i contenuti dinamicamente in base alle rott -->
+  <!-- 👇👇👇 -->
+  <RouterView /> 
 
   <AppFooter />
 </template>
