@@ -1,8 +1,8 @@
 <script>
-import PostsList from '../components/PostsList.vue';
+import CategoriesList from '../components/CategoriesList.vue';
 
 export default {
-    name: "AppHome",
+    name: "AppCategories",
     data() {
         return {
         }
@@ -12,7 +12,7 @@ export default {
     created(){
     },
     components:{
-        PostsList
+        CategoriesList
     }
 }
 </script>
@@ -23,11 +23,11 @@ export default {
             <div class="row">
                 <div class="col-12">
                     <h2 class="h2 py-3">
-                        Homepage
+                        Available Categories:
                     </h2>
                 </div>
 
-                <PostsList :withShow="false"/>
+                <CategoriesList />
             </div>
         </div>
     </main>

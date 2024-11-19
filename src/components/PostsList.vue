@@ -9,6 +9,12 @@ export default {
         PostsListCard,
         AppLoader
     },
+    props:{
+        withShow: {
+            required: false,
+            type: Boolean,
+        }
+    },
     data() {
         return {
             postList : [],
@@ -16,8 +22,6 @@ export default {
             // loaded: false,
             lastPageNumber : 1,
             currentPageNumber: 1,
-
-
         }
     },
     methods:{
@@ -52,6 +56,11 @@ export default {
                 this.currentPageNumber++; // 3
                 this.getPosts(this.currentPageNumber);
             }
+        },
+        show(postId){
+            if(this.withShow){
+                this.$router.push({ name: 'posts.show', params: { id: postId } })
+            }
         }
 
     },
@@ -79,9 +88,8 @@ export default {
     </section>
 
     <section class="col-12 text-center" id="post-list-wrapper" v-else>
-        <PostsListCard v-for="singlePost in postList" 
-            :key="singlePost.id" 
-            :singlePostObject="singlePost" />
+        <PostsListCard v-for="singlePost in postList" :key="singlePost.id" :singlePostObject="singlePost" @click="show(singlePost.id)"
+        />
     </section>
 
     <section class="navigation">

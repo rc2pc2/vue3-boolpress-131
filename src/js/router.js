@@ -3,6 +3,10 @@ import { createWebHistory, createRouter } from 'vue-router'
 import AppHome from '../pages/AppHome.vue';
 import AppAbout from '../pages/AppAbout.vue';
 import AppPosts from '../pages/AppPosts.vue';
+import AppSinglePost from '../pages/AppSinglePost.vue';
+import AppCategories from '../pages/AppCategories.vue';
+import AppSingleCategory from '../pages/AppSingleCategory.vue';
+import AppContactUs from '../pages/AppContactUs.vue';
 
 // % per ogni rotta che voglio identificare 
 // # e quindi offrire all'utente che naviga
@@ -12,7 +16,11 @@ import AppPosts from '../pages/AppPosts.vue';
 const routes = [
     { path: '/', component: AppHome, name: "home" },
     { path: '/about', component: AppAbout, name: "about"},
+    { path: '/contact-us', component: AppContactUs, name: "contact-us"},
+    { path: '/categories', component: AppCategories, name: "categories"},
+    { path: '/categories/:id', component: AppSingleCategory, name: "categories.show" },
     { path: '/posts', component: AppPosts, name: "posts"},
+    { path: '/posts/:id', component: AppSinglePost, name: "posts.show" }
 ]
 
 const router = createRouter({

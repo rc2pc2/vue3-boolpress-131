@@ -35,6 +35,11 @@ export default {
                                 Latest Posts
                             </router-link>
                         </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" aria-current="page" :to="{ 'name' : 'categories'}">
+                                Categories
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
             </div>

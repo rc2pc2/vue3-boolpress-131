@@ -27,7 +27,7 @@ export default {
                     </h2>
                 </div>
 
-                <PostsList />
+                <PostsList :withShow="true"/>
             </div>
         </div>
     </main>
